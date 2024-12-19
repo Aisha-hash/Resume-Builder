@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Resume Builder</title>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.repeater/1.2.1/jquery.repeater.min.js"></script>
+    <script src="./assets/js/repeater.js"></script>
+    <script src="./assets/js/index.js" defer type="module"></script>
+</head>
+
+<body>
+
+    <nav class="navbar bg-white">
+        <div class="container">
+            <div class="navbar-content">
+                <div class="brand-and-toggler">
+                    <a href="index.html" class="navbar-brand">
+                        <!-- <img src="assets/images/curriculum-vitae.png" alt="" class="navbar-brand-icon"> -->
+                        <span class="navbar-brand-text">Create <span>Resume</span></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <section id="about-section" class="">
+            <div class="container">
+                <div class="about-container">
+                    <form action="" class="cv-form" id="cv-form">
+
+                        <!--  About section -->
+                        <div class="cv-form-section">
+                            <div class="cv-form-row-title">
+                                <h3>about section</h3>
+                            </div>
+                            <div class="cv-form-row cv-form-row-about">
+                                <div class="cols-2">
+                                    <div class="form-element">
+                                        <label for="firstname" class="form-label">First Name</label>
+                                        <input name="firstname" type="text" class="form-control firstname"
+                                            id="firstname" required>
+                                        <span class="form-text"></span>
+                                    </div>
+
+                                    <div class="form-element">
+                                        <label for="lastname" class="form-label">Last Name</label>
+                                        <input name="lastname" type="text" class="form-control lastname" id="lastname">
+                                        <span class="form-text"></span>
+                                    </div>
+                                </div>
+
+
+                                <div class="cols-2">
+                                    <div class="form-element">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input name="email" type="text" class="form-control email" id="email" required>
+                                        <span class="form-text"></span>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="" class="form-label">Phone No:</label>
+                                        <input name="phoneno" type="text" class="form-control phoneno" id="">
+                                        <span class="form-text"></span>
+                                    </div>
+
+                                </div>
+
+                                <div class="cols-3">
+
+                                    <div class="form-element">
+                                        <label for="street" class="form-label">Street & house number</label>
+                                        <input name="street" type="text" class="form-control address" id="street">
+                                        <span class="form-text"></span>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="plz" class="form-label">PLZ</label>
+                                        <input name="plz" type="text" class="form-control address" id="plz">
+                                        <span class="form-text"></span>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="city" class="form-label">City</label>
+                                        <input name="city" type="text" class="form-control address" id="city">
+                                        <span class="form-text"></span>
+                                    </div>
+                                </div>
+
+                                <div class="cols-3">
+
+                                    <div class="form-element">
+                                        <label for="git" class="form-label">Github</label>
+                                        <input name="git" type="text" class="form-control email" id="git">
+                                        <span class="form-text"></span>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="linkedin" class="form-label">Linkedin</label>
+                                        <input name="linkedin" type="text" class="form-control address" id="linkedin">
+                                        <span class="form-text"></span>
+                                    </div>
+                                    <div class="form-element">
+                                        <label for="website" class="form-label">Portfolio website</label>
+                                        <input name="website" type="text" class="form-control address" id="website">
+                                        <span class="form-text"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Expereience section -->
+                        <div class="cv-form-section">
+                            <div class="cv-form-row-title">
+                                <h3>experience</h3>
+                            </div>
+
+                            <div class="row-separator repeater">
+                                <div class="repeater" data-repeater-list="group-a">
+                                    <div data-repeater-item>
+                                        <div class="cv-form-row cv-form-row-experience">
+                                            <div class="cols-3">
+                                                <div class="form-element">
+                                                    <label for="exp_title" class="form-label">Job title</label>
+                                                    <input name="exp_title" type="text" class="form-control exp_title"
+                                                        id="exp_title">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="exp_organization" class="form-label">Company /
+                                                        Organization</label>
+                                                    <input name="exp_organization" type="text"
+                                                        class="form-control exp_organization" id="exp_organization">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="exp_location" class="form-label">Location</label>
+                                                    <input name="exp_location" type="text"
+                                                        class="form-control exp_location" id="exp_location">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="cols-3">
+                                                <div class="form-element">
+                                                    <label for="exp_start_date" class="form-label">Start Date</label>
+                                                    <input name="exp_start_date" type="date"
+                                                        class="form-control exp_start_date" id="exp_start_date">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="exp_end_date" class="form-label">End Date</label>
+                                                    <input name="exp_end_date" type="date"
+                                                        class="form-control exp_end_date" id="exp_end_date">
+                                                    <span class="form-text"></span>
+                                                </div>
+
+                                            </div>
+                                            <div>
+                                                <div class="form-element">
+                                                    <label for="exp_description" class="form-label">Description</label>
+                                                    <textarea name="exp_description"
+                                                        class="form-control exp_description" id="exp_description"
+                                                        rows="5"></textarea>
+                                                    <span class="form-text"></span>
+                                                </div>
+                                            </div>
+                                            <button data-repeater-delete type="button"
+                                                class="repeater-remove-btn">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" data-repeater-create value="Add"
+                                    class="repeater-add-btn">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Education section -->
+                        <div class="cv-form-section">
+                            <div class="cv-form-row-title">
+                                <h3>Education</h3>
+                            </div>
+
+                            <div class="row-separator repeater">
+                                <div class="repeater" data-repeater-list="group-b">
+                                    <div data-repeater-item>
+                                        <div class="cv-form-row cv-form-row-experience">
+                                            <div class="cols-3">
+                                                <div class="form-element">
+                                                    <label for="edu_degree" class="form-label">Title of
+                                                        qualification</label>
+                                                    <input name="edu_degree" type="text" class="form-control edu_degree"
+                                                        id="edu_degree">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="edu_school" class="form-label">Organisation providing
+                                                        education and
+                                                        training</label>
+                                                    <input name="edu_school" type="text" class="form-control edu_school"
+                                                        id="edu_school">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="edu_city" class="form-label">City</label>
+                                                    <input name="edu_city" type="text" class="form-control edu_city"
+                                                        id="edu_city">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="cols-3">
+                                                <div class="form-element">
+                                                    <label for="edu_start_date" class="form-label">Start Date</label>
+                                                    <input name="edu_start_date" type="date"
+                                                        class="form-control edu_start_date" id="edu_start_date">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="edu_graduation_date" class="form-label">End Date</label>
+                                                    <input name="edu_graduation_date" type="date"
+                                                        class="form-control edu_graduation_date"
+                                                        id="edu_graduation_date">
+                                                    <span class="form-text"></span>
+                                                </div>
+
+                                            </div>
+
+                                            <button data-repeater-delete type="button"
+                                                class="repeater-remove-btn">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" data-repeater-create value="Add"
+                                    class="repeater-add-btn">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Projects section -->
+
+                        <div class="cv-form-section">
+                            <div class="cv-form-row-title">
+                                <h3>Projects</h3>
+                            </div>
+
+                            <div class="row-separator repeater">
+                                <div class="repeater" data-repeater-list="group-c">
+                                    <div data-repeater-item>
+                                        <div class="cv-form-row cv-form-row-project">
+                                            <div class="cols-2">
+                                                <div class="form-element">
+                                                    <label for="proj_title" class="form-label">Project Name</label>
+                                                    <input name="proj_title" type="text" class="form-control proj_title"
+                                                        id="proj_title">
+                                                    <span class="form-text"></span>
+                                                </div>
+                                                <div class="form-element">
+                                                    <label for="proj_link" class="form-label">Project link</label>
+                                                    <input name="proj_link" type="text" class="form-control proj_link"
+                                                        id="proj_link">
+                                                    <span class="form-text"></span>
+                                                </div>
+
+                                            </div>
+
+                                            <div>
+                                                <div class="form-element">
+                                                    <label for="proj_description" class="form-label">Description</label>
+                                                    <textarea name="proj_description"
+                                                        class="form-control proj_description" id="proj_description"
+                                                        rows="4"></textarea>
+                                                    <span class="form-text"></span>
+                                                </div>
+                                            </div>
+
+                                            <button data-repeater-delete type="button"
+                                                class="repeater-remove-btn">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" data-repeater-create value="Add"
+                                    class="repeater-add-btn">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Skills section -->
+                        <div class="cv-form-section">
+                            <div class="cv-form-row-title">
+                                <h3>skills</h3>
+                            </div>
+
+                            <div class="row-separator repeater">
+                                <div class="repeater" data-repeater-list="group-d">
+                                    <div data-repeater-item>
+                                        <div class="cv-form-row cv-form-row-skills">
+                                            <div class="form-element">
+                                                <label for="skill" class="form-label">Skill</label>
+                                                <input name="skill" type="text" class="form-control skill" id="skill">
+                                                <span class="form-text"></span>
+                                            </div>
+
+                                            <button data-repeater-delete type="button"
+                                                class="repeater-remove-btn">-</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" data-repeater-create value="Add"
+                                    class="repeater-add-btn">+</button>
+                            </div>
+                        </div>
+                        <section class="print-btn-sc">
+
+                            <input type="button" class="btn btn-primary" id="preview" value="Preview"></input>
+
+                            <input type="submit" class="btn btn-primary" value="Download"></input>
+
+
+
+                        </section>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    <section id="previewSection">
+        <div class="images">
+            <h3 id="preview-text">Select any template below to preview Resume</h3>
+            <div class="image-radio-group">
+
+                <label class="image-radio selected">
+                    <input type="radio" name="image-radio" value="template1">
+                    <img src="./assets/images/template1.jpg" alt="Image 1">
+                </label>
+
+                <label class="image-radio">
+                    <input type="radio" name="image-radio" value="template2">
+                    <img src="./assets/images/template2.jpg" alt="Image 2">
+                </label>
+
+                <label class="image-radio">
+                    <input type="radio" name="image-radio" value="template3">
+                    <img src="./assets/images/template3.jpg" alt="Image 3">
+                </label>
+
+            </div>
+        </div>
+        <div class="preview">
+            <canvas id="previewCanvas" height="700px" width="600px"></canvas>
+        </div>
+    </section>
+
+</body>
+
+</html>
