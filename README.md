@@ -1,5 +1,5 @@
 # Resume-Builder
-The Resume Builder is a dynamic web application designed to help users create professional resumes effortlessly. The website allows users to input their personal, educational, and professional information through an intuitive user interface. It offers multiple pre-designed resume templates to choose from, enabling users to preview their data in various formats and styles.
+The Resume Builder is a dynamic web application designed to help users create professional resumes effortlessly. The application allows users to input their personal, educational, and professional information through an intuitive user interface. It offers multiple pre-designed resume templates to choose from, enabling users to preview their data in various formats and styles.
 
 Key features of the Resume Builder include:
 
